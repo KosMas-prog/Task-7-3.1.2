@@ -11,7 +11,7 @@ import ru.itmentor.spring.boot_security.demo.model.User;
 @RequestMapping("/user")
 public class UserController {
 
-    @GetMapping
+    @GetMapping("/hello")
     public String userPage(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute("user", user);
         return "user";
